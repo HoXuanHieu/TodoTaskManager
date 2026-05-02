@@ -8,6 +8,8 @@ export class TaskService {
   tasks = signal<Task[]>([]);
   
   addTask(task: string, stastus: string, priority: string) {
-    this.tasks.update((previousState) => [...tasks, task]);
+    this.tasks.update((previousState) => {
+      return [...previousState, { task, status: stastus, priority }];
+    });
   }
 }
