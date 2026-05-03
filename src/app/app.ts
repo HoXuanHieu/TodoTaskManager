@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { TaskForm } from './components/task-form/task-form';
+import { Panel } from './components/panel/panel';
 // import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TaskForm],
+  imports: [TaskForm, Panel],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
