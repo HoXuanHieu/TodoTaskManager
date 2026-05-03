@@ -1,10 +1,7 @@
-<h1 class="border-b-2 border-blue-500 pb-2">{{ heading() }}</h1>
-<div class="bg-slate-100 p-4 rounded shadow">
-    @for(task of tasks(); track task.task) {
-        <div class="bg-white rounded shadow p-4 mb-2">
-            <h3 class="text-xl font-bold">{{ task.task }}</h3>
-            <p>{{ task.priority }}</p>
-            <p>{{ task.status }}</p>
-        </div>
+<h1 class="heading-1 border-b-2 border-blue-500 pb-2">{{ heading() }}</h1>
+
+<div class="bg-slate-100 p-4 rounded shadow h-100">
+    @for(task of tasks(); track $index) {
+        <app-panel-item [taskInfo]="task" [index]="$index"></app-panel-item>
     }
 </div>

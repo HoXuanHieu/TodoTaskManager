@@ -1,1 +1,18 @@
-<p>panel-item works!</p>
+<div class="bg-white rounded shadow p-4 mb-2" [style.border-left]="'6px solid ' + priorityColor()" style="padding-left:12px;">
+    <h4 class="text-xl font-bold">{{ taskInfo().task }}</h4>
+    <div class="mt-2 flex items-center gap-4">
+        <div>
+            <label>Status</label>
+            <select (change)="changeStatus($any($event.target).value)">
+                <option [selected]="taskInfo().status === s" *ngFor="let s of statusValues">{{ s }}</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Priority</label>
+            <select (change)="changePriority($any($event.target).value)">
+                <option [selected]="taskInfo().priority === p" *ngFor="let p of priorityValues">{{ p }}</option>
+            </select>
+        </div>
+    </div>
+</div>
