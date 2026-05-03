@@ -5,7 +5,16 @@
 </div>
 
 <div class="grid grid-cols-4 gap-4 px-4">
-    <app-task-form>
-        
-    </app-task-form>
+    <app-task-form></app-task-form>
+    <app-panel heading="Todo"></app-panel>
+    <app-panel heading="In Progress"></app-panel>
+    <app-panel heading="Completed"></app-panel>
+
+    @for(item of tasks(); track $index) {
+        <div class="bg-white rounded shadow p-4">
+            <h2 class="text-xl font-bold">{{ item.task }}</h2>
+            <p>{{ item.priority }}</p>
+            <p>{{ item.status }}</p>
+        </div>
+    }
 </div>
