@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-panel',
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './panel.html',
   styleUrl: './panel.css',
 })
-export class Panel {}
+export class Panel {
+  heading = input.required<string>();
+
+}
