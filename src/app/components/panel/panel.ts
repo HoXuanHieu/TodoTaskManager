@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { Task } from '../../models/task.model';
 
 @Component({
   selector: 'app-panel',
@@ -8,5 +9,5 @@ import { Component, input } from '@angular/core';
 })
 export class Panel {
   heading = input.required<string>();
-
+  tasks = input.required< Task[]>() ;
 }
