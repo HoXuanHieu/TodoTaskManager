@@ -15,7 +15,7 @@ taskService = inject(TaskService);
     task: new FormControl('', {
       nonNullable: true,
     }),
-    status: new FormControl('Todo', {
+    status: new FormControl('Planning', {
       nonNullable: true,
     }),
     priority: new FormControl('low', {

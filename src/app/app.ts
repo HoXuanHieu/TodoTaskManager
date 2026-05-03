@@ -17,9 +17,9 @@ export class App {
 
   public readonly tasks = this.taskservices.tasks;
 
-  todoItems = computed(() => {
+  planningItems = computed(() => {
     const tasks = this.tasks();
-    return tasks.filter(task => task.status === 'Todo')
+    return tasks.filter(task => task.status === 'Planning')
   });
   inProgressItems = computed(() => {
     const tasks = this.tasks();
